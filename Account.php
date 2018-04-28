@@ -1,10 +1,9 @@
-<?php
-  session_start();
- ?>
+<?php session_start();?>
+
 <html>
 <head>
   <?php include 'includes/Links/mainLinks.php'?>
-  <?php include 'includes/Links/stockLinks.php'?>
+  <?php include 'includes/Links/indexLinks.php'?>
 </head>
 <body>
 
@@ -23,9 +22,7 @@
     <div class= "row">
 
       <div class = "col-md-8">
-        <div id = "charts">
-
-        </div>
+			
 				<?php include 'includes/HTMLcontents/footer.php'?>
 			</div>
       <?php  include 'includes/HTMLcontents/rightSideWidget.php'?>

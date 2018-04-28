@@ -23,7 +23,7 @@ function addRightCol(){
   "underLineColor": "#dbeffb",
   "trendLineColor": "#4bafe9",
   "width": "100%",
-  "height": "50%",
+  "height": "50%",	
   "locale": "en"
 }
   );

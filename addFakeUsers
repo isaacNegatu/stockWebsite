@@ -1,0 +1,6 @@
+
+USE stockWebsite;
+
+
+
+INSERT INTO person (UserID_FK, FName, LName) VALUES (4, 'Izak', 'Negatu');

@@ -10,7 +10,7 @@
 
     <div class = "container">
       <div class = "row">
-        <?php include 'includes/HTMLcontents/navigation.php'?>
+        <?php include 'includes/HTMLcontents/navigationBeforeLogin.php'?>
       </div>
       <div class = "row">
         <div class = "col-md-8">

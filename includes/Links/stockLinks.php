@@ -1,7 +1,7 @@
 
 <?php
 
-echo '<title> Home | Sell Low Hedge Fund</title>';
-echo '<script src = "scripts/stocks.js"></script>';
+echo '<title> Stocks | Sell Low Hedge Fund</title>';
+echo '<script src = "scripts/stock.js"></script>';
 
 ?>

@@ -1,6 +1,9 @@
 
 <html>
 <head>
+  <?php
+    session_start();
+   ?>
   <?php include 'includes/Links/mainLinks.php'?>
   <?php include 'includes/Links/contactUsLinks.php'?>
 </head>
@@ -10,7 +13,13 @@
 
   <div class = "container">
     <div class = "row">
-      <?php include 'includes/HTMLcontents/navigation.php'?>
+      <?php
+        if(isset($_SESSION['User'])){
+          include 'includes/HTMLcontents/navigationAfterLogin.php';
+        }else{
+          include 'includes/HTMLcontents/navigationBeforeLogin.php';
+        }
+      ?>
     </div>
     <div class= "row">
 
