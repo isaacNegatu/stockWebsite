@@ -2,7 +2,10 @@ const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 
 function addGraph(tabName, symbol, index){
 
-	var button = "</br><button type = 'button' id = '" + index + "' class = 'btn btn-success' ><a href = 'processShopingCart.php'>Buy "+ tabName + "</a></button>";
+	var button = "</br>" +
+	"<form method = 'POST' action = 'stockSideBar.php'>" +
+	"<button type = 'button' name = "  + symbol + "  id = '" + index + "' class = 'btn btn-success' type='submit' ><a href = '#'>Buy "+ tabName + "</a></button>" +
+	"</form>";
 
 
 	$("#charts").prepend(button);

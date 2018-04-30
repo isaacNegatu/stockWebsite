@@ -1,7 +1,7 @@
 
 <?php
   session_start();
-  include "includes/stockConfig.inc.php";
+  include "includes/db-config.inc.php";
   include "lib/UserDB.class.php";
 ?>
 
@@ -35,7 +35,6 @@
             try{
               $DBuser = new UserDB($pdo);
               $currentUser = $DBuser->findByUserNameAndPassword($userName, $password);
-
 
               if($currentUser){
                 $_SESSION["User"] = $currentUser;

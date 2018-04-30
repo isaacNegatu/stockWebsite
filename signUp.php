@@ -10,25 +10,25 @@
 
     <div class = "container">
       <div class = "row">
-        <?php include 'includes/HTMLcontents/navigationBeforeLogin.php'?>
+        <?php include 'includes/HTMLcontents/navigationBeforeLogin.php';?>
       </div>
       <div class = "row">
         <div class = "col-md-8">
           <article>
 			<h2>Customer Registration</h2>
 			<br>
-			<form method = "post" id="signUp">
+			<form method = "post" id="signUp" action='processUser.php'>
 			<h3>User Info</h3>
 			<hr/>
 			<div class = "row">
 
 					<div class = "form-group col-md-6">
 						<label for="fName">First Name</label>
-						<input type = "text" class = "form-control" id = "fName" placeholder= "Enter your first name" name = "firstName">
+						<input type = "text" class = "form-control" id = "fName" placeholder= "Enter your first name" name = "fName">
 					</div>
 					<div class = "form-group col-md-6">
 						<label for="lName">Last Name</label>
-						<input type = "text" class = "form-control" id = "lName" placeholder= "Enter your last name" name = "lastName">
+						<input type = "text" class = "form-control" id = "lName" placeholder= "Enter your last name" name = "lName">
 					</div>
 			</div>
 
@@ -43,11 +43,11 @@
 			<div class = "row">
 					<div class = "form-group col-md-6">
 						<label for="password">Password</label>
-						<input type = "password" class = "form-control" id = "password" placeholder= "Enter password" name = "Password">
+						<input type = "password" class = "form-control" id = "password" placeholder= "Enter password" name = "password">
 					</div>
 					<div class = "form-group col-md-6">
 						<label for="passwordRepeat">Confirm Password</label>
-						<input type = "password" class = "form-control" id = "confirmPassword" placeholder= "Confrim Password" name = "Password confirmed">
+						<input type = "password" class = "form-control" id = "confirmPassword" placeholder= "Confrim Password" name = "confirmPassword">
 					</div>
 			</div>
 
@@ -56,25 +56,25 @@
 			<div class = "row">
 				<div class = "col-md-12">
 						<label for = "address" class = "control-label">Address</label>
-						<input type = "text" class = "form-control" id = "address" placeholder = "Enter address" name = "Address">
+						<input type = "text" class = "form-control" id = "address" placeholder = "Enter address" name = "address">
 				</div>
 			</div>
 			<br>
 			<div class = "row">
 				<div class = "col-md-12">
 						<label for = "address2" class = "control-label">Secondary Address</label>
-						<input type = "text" class = "form-control" id = "address2" placeholder = "Enter secondary address" name = "Address">
+						<input type = "text" class = "form-control" id = "address2" placeholder = "Enter secondary address" name = "address2">
 				</div>
 			</div>
 			<br>
 			<div class = "row">
 					<div class = "form-group col-md-6">
 						<label for="city">City</label>
-						<input type = "text" class = "form-control" id = "city" placeholder= "City Name" name = "City Name">
+						<input type = "text" class = "form-control" id = "city" placeholder= "City Name" name = "city">
 					</div>
 					<div class = "form-group col-md-6">
 						<label for="state">State</label>
-						<input type = "text" class = "form-control" id = "state" placeholder= "Enter your State" name = "State">
+						<input type = "text" class = "form-control" id = "state" placeholder= "Enter your State" name = "state">
 					</div>
 			</div>
 
@@ -82,11 +82,11 @@
 			<div class = "row">
 					<div class = "form-group col-md-6">
 						<label for = "zipCode" class = "control-label">Zip Code</label>
-						<input type = "text" class = "form-control" id = "zipCode" placeholder = "Enter Zip Code" name = "Zip code">
+						<input type = "text" class = "form-control" id = "zipCode" placeholder = "Enter Zip Code" name = "zipCode">
 					</div>
 					<div class = "form-group col-md-6">
 						<label for="Country">Country</label>
-						<select class = "form-control" id = "Country">
+						<select class = "form-control" id = "Country" name="Country">
 							<option value="  " selected>please select a country</option>
 						    <option value="AF">Afghanistan</option>
 						    <option value="AL">Albania</option>
@@ -334,7 +334,7 @@
 			<div class = "row">
 					<div class = "form-group col-md-6">
 						<label for = "phone">Phone Number</label>
-						<input type = "text" class = "form-control" id = "phone" placeholder= "Enter Phone Number" name = "Phone Number">
+						<input type = "text" class = "form-control" id = "phone" placeholder= "Enter Phone Number" name = "phone">
 					</div>
 			</div>
 
@@ -343,7 +343,7 @@
 			<div class = "row">
 				<div class = "form-group col-md-8">
 					<label for = "owner">Owner</label>
-					<input class = "form-control" id = "owner" type = "text" name = "owenr">
+					<input class = "form-control" id = "owner" type = "text" name = "owner">
 				</div>
 				<div class = "form-group col-md-4">
 					<label for = "cvv">CVV</label>
@@ -355,7 +355,7 @@
 			<div class = "row">
 				<div class = "form-group col-md-8">
 						<label for="CreditCard">Credit Card</label>
-					    <input class = "form-control" id = "creditCard" type = "number" name = "Credit Card">
+					    <input class = "form-control" id = "creditCard" type = "number" name = "creditCard">
 				</div>
 			</div>
 
@@ -401,14 +401,14 @@
 
 			<div class = "row form-group">
 						<div class = "col-md-1">
-							<input id = "sameAddress" type = "checkbox" name = "Address is the same" value = "agree" class = "form-control">
+							<input id = "sameAddress" type = "checkbox" name = "sameAddress" value = "agree" class = "form-control">
 						</div>
 						<div class = "col-md-7">
 							<p><b>Billing Address already provided</b></p>
 						</div>
 			</div>
 
-
+	<!-- removing for initial commit
 			<div class = "row">
 				<div class = "form-group col-md-8">
 						<label for="account#">Account Number</label>
@@ -423,14 +423,14 @@
 				</div>
 			</div>
 
-
+	-->
 
 
 			<h3>All Done</h3>
 			<hr/>
 			<div class = "row form-group">
 						<div class = "col-md-1">
-							<input type = "checkbox" name = "Agree to Terms" value = "agree" class = "form-control">
+							<input type = "checkbox" name = "agreeToTerms" value = "agree" class = "form-control">
 						</div>
 						<div class = "col-md-6 agree">
 							<p><b>I agree to the <a href = "#">Terms and Conditions of the site</a></b></p>

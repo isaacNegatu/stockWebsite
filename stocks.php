@@ -28,7 +28,7 @@
         </div>
 				<?php include 'includes/HTMLcontents/footer.php'?>
 			</div>
-      <?php  include 'includes/HTMLcontents/rightSideWidget.php'?>
+      <?php  include 'includes/HTMLcontents/stockSideBar.php'?>
 
     </div>
   </div>

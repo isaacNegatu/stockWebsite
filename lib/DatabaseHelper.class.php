@@ -24,7 +24,6 @@ class DatabaseHelper {
             $statement = $pdo->prepare($sql);
             $executedOk = $statement->execute($parameters);
             if (! $executedOk) {
-                log_error("somthing");
                 throw new PDOException;
             }
         } else {
