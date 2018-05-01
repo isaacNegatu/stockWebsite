@@ -3,7 +3,7 @@
 
 
   include ('C:\xampp\htdocs\phpFinalProject\lib\PersonDB.class.php');
-  include ('C:\xampp\htdocs\phpFinalProject\includes\stockConfig.inc.php');
+  include ('C:\xampp\htdocs\phpFinalProject\includes\db-config.inc.php');
 
  ?>
 

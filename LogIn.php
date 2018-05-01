@@ -44,6 +44,9 @@
                         <p>
                           Incorrect Credentials!
                         </p>
+                        <p>
+                          Please <a href = 'signUp.php'> Sign Up </a>.
+                        </p>
                       </div>
                     </div>";
             }

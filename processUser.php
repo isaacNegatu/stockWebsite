@@ -1,5 +1,6 @@
 <?php
 
+  session_start();
 	include 'includes/db-config.inc.php';
 
 	$userDB = new UserDB($pdo);
@@ -126,7 +127,8 @@
 		$paymentInfoDB->createPaymentInfo($userID[0], $fName, $lName, $address, $city, $state, $zipCode,
 	                 	$country, $ccNumber, $ccExpireYear, $ccExpireMonth,
 						$ccCvv);
-		echo "paymentInfo end...";
+    $_SESSION["User"] = $userID[0];
+    header("Location: index.php");
 	}
 	else{
 		echo "not valid...";

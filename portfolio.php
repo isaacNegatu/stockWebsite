@@ -3,7 +3,7 @@
 <html>
 <head>
   <?php include 'includes/Links/mainLinks.php'?>
-  <?php include 'includes/Links/indexLinks.php'?>
+  <?php include 'includes/Links/portfolioLinks.php'?>
 </head>
 <body>
 
@@ -18,36 +18,34 @@
     <div class= "row">
 
       <div class = "col-md-8">
-        <table class="table table-striped">
-         <thead>
-           <tr>
-             <th scope="col">#</th>
-             <th scope="col">First</th>
-             <th scope="col">Last</th>
-             <th scope="col">Handle</th>
-           </tr>
-         </thead>
-         <tbody>
-           <tr>
-             <th scope="row">1</th>
-             <td>Mark</td>
-             <td>Otto</td>
-             <td>@mdo</td>
-           </tr>
-           <tr>
-             <th scope="row">2</th>
-             <td>Jacob</td>
-             <td>Thornton</td>
-             <td>@fat</td>
-           </tr>
-           <tr>
-             <th scope="row">3</th>
-             <td>Larry</td>
-             <td>the Bird</td>
-             <td>@twitter</td>
-           </tr>
-         </tbody>
-       </table>
+
+        <ul class="nav nav-tabs">
+          <li class="active tabs" ><a data-toggle="tab" href="#pending">Pending Stocks</a></li>
+          <li class = "tabs"><a data-toggle="tab" href="#owned">Owned Stocks</a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div id="pending" class="tab-pane fade in active">
+            <div class = "row">
+              <div class = "col-md-12">
+                 <tbody>
+                     <?php include 'includes/HTMLcontents/pendingStocks.php'?>
+                 </tbody>
+               </table>
+             </div>
+
+            </div>
+            </br> <button class = 'btn btn-success'><a href = 'Cart.php'>View In Cart</a> </button>
+          </div>
+          <div id="owned" class="tab-pane fade">
+            <p>
+              you own some shit
+            </p>
+            <?php include 'includes/HTMLcontents/ownedStocks.php'?>
+          </div>
+        </div>
+
+
 				<?php include 'includes/HTMLcontents/footer.php'?>
 			</div>
       <?php  include 'includes/HTMLcontents/rightSideWidget.php'?>

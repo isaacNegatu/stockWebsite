@@ -1,5 +1,6 @@
 <?php
   session_start();
+
  ?>
 <html>
 <head>
@@ -28,7 +29,15 @@
         </div>
 				<?php include 'includes/HTMLcontents/footer.php'?>
 			</div>
-      <?php  include 'includes/HTMLcontents/stockSideBar.php'?>
+
+
+
+
+      <?php
+      if(isset($_SESSION['User'])){
+        include 'includes/HTMLcontents/stockSideBar.php';
+      }
+      ?>
 
     </div>
   </div>

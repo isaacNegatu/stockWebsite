@@ -11,18 +11,21 @@
 
   <div class = "container">
     <div class = "row">
-      <?php
-        if(isset($_SESSION['User'])){
-          include 'includes/HTMLcontents/navigationAfterLogin.php';
-        }else{
-          include 'includes/HTMLcontents/navigationBeforeLogin.php';
-        }
-      ?>
+      <?php include 'includes/HTMLcontents/navigationAfterLogin.php'; ?>
     </div>
     <div class= "row">
 
       <div class = "col-md-8">
-			
+        <div class = "row">
+          <div class = "col-md-12">
+             <tbody>
+               <?php include 'includes/HTMLcontents/pendingStocks.php'?>
+             </tbody>
+           </table>
+         </div>
+        </div>
+
+        </br> <button class = 'btn btn-success'><a href = 'processCart.php'>Check Out</a> </button>
 
 				<?php include 'includes/HTMLcontents/footer.php'?>
 			</div>
