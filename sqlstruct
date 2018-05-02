@@ -159,7 +159,7 @@ CREATE TABLE OwnedStocks (
     StockName varchar(255) DEFAULT NULL,
     StockDescription varchar(255) DEFAULT NULL,
     PricePurchased DOUBLE(10,5) DEFAULT NULL,
-    DatePurchased Date DEFAULT NULL,
+    DatePurchased DATETIME DEFAULT CURRENT_TIMESTAM ,
     PriceCurrent DOUBLE(10,5) DEFAULT NULL,
     PriceCurrentLastUpdated Date DEFAULT NULL,
     Qty int DEFAULT NULL,
