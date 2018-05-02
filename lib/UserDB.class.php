@@ -7,9 +7,17 @@
     private $pdo = null;
 
     private static $baseSQL = "SELECT * FROM user";
+    private static $secureSQL = "SELECT Username FROM user";
 
     public function __construct($connection){
       $this->pdo = $connection;
+    }
+
+    public function getUsernameByID ($Id){
+      $sql = self::$secureSQL . " WHERE UserID=?";
+      $statement = DatabaseHelper::runQuery($this->pdo, $sql,
+      Array($Id));
+      return $statement->fetch();
     }
 
     public function getAll(){
@@ -49,7 +57,20 @@
 
     }
 
+    public function updateUsername($username, $userID){
+        $sql = "UPDATE user SET username = $username WHERE UserID = $userID";
 
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+        }catch (PDOException $e) {
+            echo "Error: " . $e->getMessage() ;
+        }catch(Exception $e){
+            echo "Error: " . $e->getMessage() ;
+        }
+
+    }
 
   }
 

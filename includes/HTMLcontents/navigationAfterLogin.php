@@ -2,8 +2,8 @@
 
 
 
-  include ('C:\xampp\htdocs\phpFinalProject\lib\PersonDB.class.php');
-  include ('C:\xampp\htdocs\phpFinalProject\includes\db-config.inc.php');
+  include ('lib\PersonDB.class.php');
+  include ('includes\db-config.inc.php');
 
  ?>
 
@@ -24,7 +24,7 @@
             $Id = $_SESSION['User'][0];
             $currentUser = $DBPerson->findById($Id);
             if($currentUser){
-              echo $currentUser[2];
+              echo $currentUser['FName'];
             }
           }catch (PDOException $e){
             die($e->getMessage());

@@ -107,28 +107,22 @@
 	else
 		$formValid = false;
 
-	//user agrees
-	if(isSet($_POST['agreeToTerms']) && $formValid)
-		$formValid = $formValid;
-	else
-		$formValid = false;
+
 
 
 	if ($formValid){
-		$userDB->createUser($email, $password);
-		$userID = $userDB->findByUserName($email);
-		foreach ($userID as $key => $value) {
-			echo $key . ": " . $value . "<br>";
-			// code...
-		}
-		$personDB->createPerson($userID[0], $fName, $lName, $address, $city, $state,
+
+        $userID = $_SESSION["User"][0];
+
+
+		$userDB->updateUsername($email, $userID);
+		$personDB->updatePerson($userID, $fName, $lName, $address, $city, $state,
 									$zipCode, $country,	$phone);
 
-		$paymentInfoDB->createPaymentInfo($userID[0], $fName, $lName, $address, $city, $state, $zipCode,
+		$paymentInfoDB->updatePaymentInfo($userID, $fName, $lName, $address, $city, $state, $zipCode,
 	                 	$country, $ccNumber, $ccExpireYear, $ccExpireMonth,
 						$ccCvv);
-    $_SESSION["User"] = $userID[0];
-    header("Location: LogIn.php");
+        header("Location: LogIn.php");
 	}
 	else{
 		echo "not valid...";

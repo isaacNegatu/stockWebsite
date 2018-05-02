@@ -6,7 +6,9 @@
 
     private $pdo = null;
 
-    private static $baseSQL = "SELECT * FROM person";
+    private static $baseSQL = "SELECT PersonID, FName, LName, StreetAddress,
+                                        CityAddress, StateAddress, ZipAddress,
+                                        CountryAddress, PhoneNumber FROM person";
 
     public function __construct($connection){
       $this->pdo = $connection;
@@ -57,6 +59,41 @@
 
     }
 
+    public function updatePerson($UserID, $fName,
+			                     $lName,
+			                     $address,
+			                     $city,
+			                     $state,
+                                 $zipCode,
+                                 $country,
+                                 $phone){
+
+            $sql = "UPDATE person SET FName=:FName, LName=:LName,
+                    StreetAddress=:StreetAddress, CityAddress=:CityAddress,
+                    StateAddress=:StateAddress, ZipAddress=:ZipAddress,
+                    CountryAddress=:CountryAddress,
+                    PhoneNumber=:PhoneNumber WHERE UserID_FK=:UserID";
+
+            try{
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->bindValue(':UserID', $UserID);
+                $stmt->bindValue(':FName', $fName);
+                $stmt->bindValue(':LName', $lName);
+                $stmt->bindValue(':StreetAddress', $address);
+                $stmt->bindValue(':CityAddress', $city);
+                $stmt->bindValue(':StateAddress', $state);
+                $stmt->bindValue(':ZipAddress', $zipCode);
+                $stmt->bindValue(':CountryAddress', $country);
+                $stmt->bindValue(':PhoneNumber', $phone);
+
+                $stmt->execute();
+            }catch (PDOException $e) {
+                echo "Error: " . $e.getMessage() ;
+            }catch (Exception $e){
+                echo "Error: " . $e.getMessage();
+            }
+
+    }
 
   }
 

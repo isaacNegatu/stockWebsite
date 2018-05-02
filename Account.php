@@ -19,12 +19,15 @@
         }
       ?>
     </div>
+
     <div class= "row">
 
       <div class = "col-md-8">
-			
-				<?php include 'includes/HTMLcontents/footer.php'?>
-			</div>
+          <?php include "includes/getUserInfo.inc.php"; ?>
+          <?php include "includes/HTMLcontents/showUserInfo.php"; ?>
+          <br>
+	  <?php include 'includes/HTMLcontents/footer.php'?>
+	  </div>
       <?php  include 'includes/HTMLcontents/rightSideWidget.php'?>
 
     </div>
