@@ -43,17 +43,23 @@
 
     public function createUser($username, $password){
 
-            $sql = "INSERT INTO user (Username, Password) Values (:Username, :Password)";
+        $sql = "INSERT INTO user (Username, Password) Values (:Username, :Password)";
 
-            try{
+        try{
+            if (empty($this->findByUserName($username))){
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->bindValue(':Username', $username);
                 $stmt->bindValue(':Password', $password);
 
                 $stmt->execute();
-            }catch (PDOException $e) {
-                echo "Error: " . $e.getMessage() ;
             }
+            else{
+                header("Location: SignUp.php");
+                exit;
+            }
+        }catch (PDOException $e) {
+            echo "Error: " . $e.getMessage() ;
+        }
 
     }
 
