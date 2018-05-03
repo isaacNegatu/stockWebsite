@@ -27,7 +27,7 @@ header p{
 	padding: .2em 2.2em;
 	text-decoration: none;
 	border-radius: 0.2em;
-  	transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
 }
 
 .navig a:hover{

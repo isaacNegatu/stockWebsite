@@ -36,6 +36,8 @@
       <?php
       if(isset($_SESSION['User'])){
         include 'includes/HTMLcontents/stockSideBar.php';
+      }else{
+        include 'includes/HTMLcontents/rightSideWidget.php';
       }
       ?>
 

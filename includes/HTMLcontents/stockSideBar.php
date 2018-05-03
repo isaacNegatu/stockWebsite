@@ -109,7 +109,7 @@
                     "</tr>";
           }
 
-          echo " <button class = 'btn btn-success'><a href = 'Cart.php'>View In Cart</a> </button>";
+          echo " <a href = 'Cart.php'><button class = 'btn btn-success'>View In Cart </button></a>";
         }else{
           try{
             $DBPerson= new PersonDB($pdo);

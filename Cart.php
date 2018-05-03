@@ -3,7 +3,7 @@
 <html>
 <head>
   <?php include 'includes/Links/mainLinks.php'?>
-  <?php include 'includes/Links/indexLinks.php'?>
+  <?php include 'includes/Links/cartLinks.php'?>
 </head>
 <body>
 
@@ -19,16 +19,17 @@
         <div class = "row">
           <div class = "col-md-12">
              <tbody>
-               <?php include 'includes/HTMLcontents/pendingStocks.php'?>
+               <?php include 'includes/HTMLcontents/pendingStocksCart.php'?>
              </tbody>
            </table>
          </div>
         </div>
 
-        </br> <button class = 'btn btn-success'><a href = 'processCart.php'>Check Out</a> </button>
 
-				<?php include 'includes/HTMLcontents/footer.php'?>
-			</div>
+	    <?php include 'includes/HTMLcontents/footer.php'?>
+
+	  </div>
+
       <?php  include 'includes/HTMLcontents/rightSideWidget.php'?>
 
     </div>

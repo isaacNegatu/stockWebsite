@@ -63,6 +63,11 @@
       $statement = DatabaseHelper::runQuery($this->pdo, $sql, Array($qty, $userId, $ListID));
     }
 
+    public function deleteStock($userId, $ListID){
+      $sql = "DELETE FROM pendingstocks WHERE UserID_FK=? AND ListID=?";
+      $statement = DatabaseHelper::runQuery($this->pdo, $sql, Array($userId, $ListID));
+    }
+
   }
 
 

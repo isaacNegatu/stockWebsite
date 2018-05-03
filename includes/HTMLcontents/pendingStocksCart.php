@@ -44,7 +44,7 @@
                     <div class = 'col-sm-5'>
                     <form class = 'inc df' action = 'processPendingStocks.php' method = 'POST'>
                       <input name = 'symbol' value = '" . $row[2] . "' hidden/>
-                      <button type = 'submit' class='btn  btn-default' name = 'substract'><span class = 'glyphicon glyphicon-minus'></span></button>
+                      <button type = 'submit' class='btn  btn-default' name = 'subtract'><span class = 'glyphicon glyphicon-minus'></span></button>
                     </form>
                     </div>
                     <div class = 'col-sm-2'>

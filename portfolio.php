@@ -35,13 +35,16 @@
              </div>
 
             </div>
-            </br> <button class = 'btn btn-success'><a href = 'Cart.php'>View In Cart</a> </button>
+            </br> <a href = 'Cart.php'><button class = 'btn btn-success'> View In Cart </button></a>
           </div>
           <div id="owned" class="tab-pane fade">
-            <p>
-              you own some shit
-            </p>
-            <?php include 'includes/HTMLcontents/ownedStocks.php'?>
+            <div class = "col-md-12">
+            </br>
+               <tbody>
+                   <?php include 'includes/HTMLcontents/ownedStocks.php'?>
+               </tbody>
+             </table>
+           </div>
           </div>
         </div>
 

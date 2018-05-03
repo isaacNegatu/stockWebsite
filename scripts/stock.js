@@ -5,7 +5,7 @@ function addGraph(tabName, symbol, index){
 	var button = "</br>" +
 	"<form action = 'stocks.php' method = 'POST' >" +
 		"<input name = 'stockSymbol' value = '" + symbol + "' hidden />" +
-		"<button type = 'submit'  id = '" + index + "' class = 'btn btn-success'>Buy "+ tabName + "</button>" +
+		"<button type = 'submit'  id = '" + index + "' class = 'btn btn-success'>Add "+ tabName + " to Cart</button>" +
 	"</form>";
 
 
