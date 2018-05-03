@@ -1,0 +1,18 @@
+
+form{
+  margin-bottom: 0;
+}
+.glyphicon-plus , .glyphicon-minus{
+  font-size: 0.5em;
+  vertical-align: middle;
+}
+
+.col-sm-2{
+  font-size: 1.2em;
+}
+
+.panel-heading{
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
